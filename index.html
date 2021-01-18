@@ -5,23 +5,49 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous"> -->
    <!-- Load required Bootstrap and BootstrapVue CSS -->
-   <link type="text/css" rel="stylesheet" href="//unpkg.com/bootstrap/dist/css/bootstrap.min.css" />
-   <link type="text/css" rel="stylesheet" href="//unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.min.css" />
-
-   <!-- Load polyfills to support older browsers -->
-   <script src="//polyfill.io/v3/polyfill.min.js?features=es2015%2CIntersectionObserver" crossorigin="anonymous"></script>
+   <link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.5.3/css/bootstrap.min.css" rel="stylesheet">
+   <link href="https://cdn.bootcdn.net/ajax/libs/bootstrap-vue/2.21.0/bootstrap-vue.min.css" rel="stylesheet">
 
    <!-- Load Vue followed by BootstrapVue -->
-   <script src="//unpkg.com/vue@2/dist/vue.min.js"></script>
-   <script src="//unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.min.js"></script>
+   <script src="https://cdn.bootcdn.net/ajax/libs/vue/2.6.12/vue.min.js"></script>
+   <script src="https://cdn.bootcdn.net/ajax/libs/bootstrap-vue/2.21.0/bootstrap-vue.min.js"></script>
 
    <!-- Load the following for BootstrapVueIcons support -->
-   <script src="//unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue-icons.min.js"></script>
+   <!-- <script src="https://cdn.bootcdn.net/ajax/libs/bootstrap-vue/2.21.0/bootstrap-vue-icons.min.js"></script> -->
    <title>Document</title>
 </head>
 <body>
    <div id="app">
       {{ message }}
+      <table class="table">
+         <thead>
+         <tr>
+            <th scope="col">#</th>
+            <th scope="col">日语</th>
+            <th scope="col">发音</th>
+            <th scope="col">中文</th>
+         </tr>
+         </thead>
+         <tbody>
+         <tr v-for="(item, index) in list" :key="index">
+            <th scope="row">{{index + 1}}</th>
+            <td>{{item.japanese}}</td>
+            <td>{{item.announce}}</td>
+            <td>{{item.chinese}}</td>
+         </tr>
+         <!--<tr>
+            <th scope="row">2</th>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+         </tr>
+         <tr>
+            <th scope="row">3</th>
+            <td colspan="2">Larry the Bird</td>
+            <td>@twitter</td>
+         </tr> -->
+         </tbody>
+      </table>
    </div>
    普通貯金(ふつう ちょきん)活期存款 &nbsp;hu tu u ti yo ki nn
 <br/>
@@ -116,134 +142,10 @@
    形交換所(てがた こうかんしょ)票据交换所 &nbsp;te ka ta ko u ka nn shi yo
 <br/>
 
-<table class="table">
-   <thead>
-     <tr>
-       <th scope="col">#</th>
-       <th scope="col">First</th>
-       <th scope="col">Last</th>
-       <th scope="col">Handle</th>
-     </tr>
-   </thead>
-   <tbody>
-     <tr>
-       <th scope="row">1</th>
-       <td>Mark</td>
-       <td>Otto</td>
-       <td>@mdo</td>
-     </tr>
-     <tr>
-       <th scope="row">2</th>
-       <td>Jacob</td>
-       <td>Thornton</td>
-       <td>@fat</td>
-     </tr>
-     <tr>
-       <th scope="row">3</th>
-       <td colspan="2">Larry the Bird</td>
-       <td>@twitter</td>
-     </tr>
-   </tbody>
- </table>
-<br/> 
-   
-<br/> 
-   ログイン Roguin   login
-<br/> 
-   ちばぎんID新規登録 registerTitle = '
-<br/> 
-   ホーム home = '
-<br/> 
-   デビットカード利用明細 debitDetail = '
-<br/> 
-   振込 remittance = '
-<br/> 
-   振替 transfer = '
-<br/> 
-   各種取引 takeOrLead = '
-<br/> 
-   メニュー menu = '
-<br/> 
-   体験 taste = '
-<br/> 
-   体験終了する tasteEnd = '
-<br/> 
-   戻る back = '
-<br/> 
-   全資産 allAssets = '
-<br/> 
-   ブロンズステージ bronzeStage = '
-<br/> 
-   口座一覧 accountList = '
-<br/> 
-   中断 pause = "
-<br/> 
-   ちばぎんID新規登録を中断してよろしいですか？ registerPause = '
-<br/> 
-   口座残高 accountBalance = '
-<br/> 
-   すべて allAccountBalance = '
-<br/> 
-   入金 income = '
-<br/> 
-   出金 expand = '
-<br/> 
-   直近１ヶ月のお取引 passbookInfo = '
-<br/> 
-   通帳アプリでもっと見る passbookApp = '
-<br/> 
-   最大１０年分の入出金明細が確認できます passbookAccountDetail = '
-<br/> 
-   口座明細 accountDetail = '
-<br/> 
-   口座番号 accountNumber = '
-<br/> 
-   accountPrimary = '（代表）';
-<br/> 
-   普通預金・代表口座明細 normalPrimaryAccount = '
-<br/> 
-   明細確認 detailConfirm = '
-<br/> 
-   ちばぎん splashText = '
-<br/> 
-   キャンセル cancel = '
-<br/> 
-   閉じる popClose = '
-<br/> 
-   ok = 'OK';
-<br/> 
-   表示されるWEBサイトで、パスワードを再設定してください。 forgetUser = '
-<br/> 
-   ログアウトしてよろしいですか？ logoutAlert = '
-<br/> 
-   このページを開くために、\nブラウザを起動します。 openLinkAlert = '
-<br/> 
-   明細情報を取得できませんでした。 getBalanceFailed = '
-<br/> 
-   明細情報はありません。 getBalanceZero = '
-<br/> 
-   システムエラーが発生しました。申し訳ございませんがしばらくしてから再度ご利用ください。 webViewInitFailed =
-   '
-<br/> 
-   ブラウザアプリが端末内にインストールされていないためご利用できません。 hasNoBrowser = '
-<br/> 
-   次へ next = '
 
-///ひまわり宣言
-<br/> 
-   ひまわり宣言 declaration = '
-<br/> 
-   ステージ確認 declaration1Title = '
-<br/> 
-   ステージ判定条件について declaration1Next = '
-<br/> 
-   ステージ（ひまわり宣言）について declaration1BottomLink = '
-<br/> 
-   ステージ判定条件 declaration2Title = '
-<br/> 
-   ※給与振込としての振込または3か月連続10万円以上の振込が対象。 declaration2BottomText =
-<br/> 
-   ブロンズステージ特典 declaration1ImplementedText = '
+ 
+
+
 <br/> 
    シルバーステージ特典 declaration2ImplementedText = '
 <br/> 
@@ -510,32 +412,51 @@
             message: 'Hello Vue!', 
             list: [
                {japanese: "アプリ利用規定", announce: "Apuri riyō kitei", chinese: "", english:"agree"},
-               {japanese: "", announce: "", chinese: "", english:""},
-               {japanese: "", announce: "", chinese: "", english:""},
-               {japanese: "", announce: "", chinese: "", english:""},
-               {japanese: "", announce: "", chinese: "", english:""},
-               {japanese: "", announce: "", chinese: "", english:""},
-               {japanese: "", announce: "", chinese: "", english:""},
-               {japanese: "", announce: "", chinese: "", english:""},
-               {japanese: "", announce: "", chinese: "", english:""},
-               {japanese: "", announce: "", chinese: "", english:""},
-               {japanese: "", announce: "", chinese: "", english:""},
-               {japanese: "", announce: "", chinese: "", english:""},
-               {japanese: "", announce: "", chinese: "", english:""},
-               {japanese: "", announce: "", chinese: "", english:""},
-               {japanese: "", announce: "", chinese: "", english:""},
-               {japanese: "", announce: "", chinese: "", english:""},
-               {japanese: "", announce: "", chinese: "", english:""},
-               {japanese: "", announce: "", chinese: "", english:""},
-               {japanese: "", announce: "", chinese: "", english:""},
-               {japanese: "", announce: "", chinese: "", english:""},
-               {japanese: "", announce: "", chinese: "", english:""},
-               {japanese: "", announce: "", chinese: "", english:""},
-               {japanese: "", announce: "", chinese: "", english:""},
-               {japanese: "", announce: "", chinese: "", english:""},
-               {japanese: "", announce: "", chinese: "", english:""},
-               {japanese: "", announce: "", chinese: "", english:""},
-               {japanese: "", announce: "", chinese: "", english:""},
+               {japanese: "ログイン", announce: "Roguin", chinese: "", english:"login"},
+               {japanese: "ちばぎんID新規登録", announce: "", chinese: "", english:"registerTitle"},
+               {japanese: "ホーム", announce: "", chinese: "", english:"home"},
+               {japanese: "デビットカード利用明細", announce: "", chinese: "", english:"debitDetail"},
+               {japanese: "振込", announce: "", chinese: "", english:"remittance"},
+               {japanese: "振替 transfer", announce: "", chinese: "", english:""},
+               {japanese: "各種取引 takeOrLead", announce: "", chinese: "", english:""},
+               {japanese: "メニュー menu", announce: "", chinese: "", english:""},
+               {japanese: "体験 taste", announce: "", chinese: "", english:""},
+               {japanese: "体験終了する tasteEnd", announce: "", chinese: "", english:""},
+               {japanese: "戻る back", announce: "", chinese: "", english:""},
+               {japanese: "全資産 allAssets", announce: "", chinese: "", english:""},
+               {japanese: "ブロンズステージ bronzeStage", announce: "", chinese: "", english:""},
+               {japanese: "口座一覧 accountList", announce: "", chinese: "", english:""},
+               {japanese: "中断 pause", announce: "", chinese: "", english:""},
+               {japanese: "ちばぎんID新規登録を中断してよろしいですか？ registerPause", announce: "", chinese: "", english:""},
+               {japanese: "口座残高 accountBalance", announce: "", chinese: "", english:""},
+               {japanese: "すべて allAccountBalance", announce: "", chinese: "", english:""},
+               {japanese: "入金 income", announce: "", chinese: "", english:""},
+               {japanese: "出金 expand", announce: "", chinese: "", english:""},
+               {japanese: "直近１ヶ月のお取引 passbookInfo", announce: "", chinese: "", english:""},
+               {japanese: "通帳アプリでもっと見る passbookApp", announce: "", chinese: "", english:""},
+               {japanese: "最大１０年分の入出金明細が確認できます passbookAccountDetail", announce: "", chinese: "", english:""},
+               {japanese: "口座明細 accountDetail", announce: "", chinese: "", english:""},
+               {japanese: "口座番号 accountNumber", announce: "", chinese: "", english:""},
+               {japanese: "普通預金・代表口座明細 normalPrimaryAccount", announce: "", chinese: "", english:""},
+               {japanese: "明細確認 detailConfirm", announce: "", chinese: "", english:""},
+               {japanese: "ちばぎん splashText", announce: "", chinese: "", english:""},
+               {japanese: "キャンセル cancel", announce: "", chinese: "", english:""},
+               {japanese: "閉じる popClose", announce: "", chinese: "", english:""},
+               {japanese: "表示されるWEBサイトで、パスワードを再設定してください。 forgetUser", announce: "", chinese: "", english:""},
+               {japanese: "ログアウトしてよろしいですか？ logoutAlert", announce: "", chinese: "", english:""},
+               {japanese: "このページを開くために、\nブラウザを起動します。 openLinkAlert", announce: "", chinese: "", english:""},
+               {japanese: "明細情報を取得できませんでした。 getBalanceFailed", announce: "", chinese: "", english:""},
+               {japanese: "明細情報はありません。 getBalanceZero", announce: "", chinese: "", english:""},
+               {japanese: "システムエラーが発生しました。申し訳ございませんがしばらくしてから再度ご利用ください。 webViewInitFailed", announce: "", chinese: "", english:""},
+               {japanese: "ブラウザアプリが端末内にインストールされていないためご利用できません。 hasNoBrowser", announce: "", chinese: "", english:""},
+               {japanese: "次へ next", announce: "", chinese: "", english:""},
+               {japanese: "ひまわり宣言 declaration", announce: "", chinese: "", english:""},
+               {japanese: "ステージ確認 declaration1Title", announce: "", chinese: "", english:""},
+               {japanese: "ステージ判定条件について declaration1Next", announce: "", chinese: "", english:""},
+               {japanese: "ステージ（ひまわり宣言）について declaration1BottomLink", announce: "", chinese: "", english:""},
+               {japanese: "ステージ判定条件 declaration2Title", announce: "", chinese: "", english:""},
+               {japanese: "※給与振込としての振込または3か月連続10万円以上の振込が対象。 declaration2BottomText", announce: "", chinese: "", english:""},
+               {japanese: "ブロンズステージ特典 declaration1ImplementedText", announce: "", chinese: "", english:""},
             ]
          }
       })
