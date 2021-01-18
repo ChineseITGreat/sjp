@@ -1,3 +1,28 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous"> -->
+   <!-- Load required Bootstrap and BootstrapVue CSS -->
+   <link type="text/css" rel="stylesheet" href="//unpkg.com/bootstrap/dist/css/bootstrap.min.css" />
+   <link type="text/css" rel="stylesheet" href="//unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.min.css" />
+
+   <!-- Load polyfills to support older browsers -->
+   <script src="//polyfill.io/v3/polyfill.min.js?features=es2015%2CIntersectionObserver" crossorigin="anonymous"></script>
+
+   <!-- Load Vue followed by BootstrapVue -->
+   <script src="//unpkg.com/vue@2/dist/vue.min.js"></script>
+   <script src="//unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.min.js"></script>
+
+   <!-- Load the following for BootstrapVueIcons support -->
+   <script src="//unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue-icons.min.js"></script>
+   <title>Document</title>
+</head>
+<body>
+   <div id="app">
+      {{ message }}
+   </div>
    普通貯金(ふつう ちょきん)活期存款 &nbsp;hu tu u ti yo ki nn
 <br/>
    定期貯金(ていき ちょきん) 定期存款 &nbsp;te i ki ti yo ki nn
@@ -90,3 +115,431 @@
 <br/>
    形交換所(てがた こうかんしょ)票据交换所 &nbsp;te ka ta ko u ka nn shi yo
 <br/>
+
+<table class="table">
+   <thead>
+     <tr>
+       <th scope="col">#</th>
+       <th scope="col">First</th>
+       <th scope="col">Last</th>
+       <th scope="col">Handle</th>
+     </tr>
+   </thead>
+   <tbody>
+     <tr>
+       <th scope="row">1</th>
+       <td>Mark</td>
+       <td>Otto</td>
+       <td>@mdo</td>
+     </tr>
+     <tr>
+       <th scope="row">2</th>
+       <td>Jacob</td>
+       <td>Thornton</td>
+       <td>@fat</td>
+     </tr>
+     <tr>
+       <th scope="row">3</th>
+       <td colspan="2">Larry the Bird</td>
+       <td>@twitter</td>
+     </tr>
+   </tbody>
+ </table>
+<br/> 
+   
+<br/> 
+   ログイン Roguin   login
+<br/> 
+   ちばぎんID新規登録 registerTitle = '
+<br/> 
+   ホーム home = '
+<br/> 
+   デビットカード利用明細 debitDetail = '
+<br/> 
+   振込 remittance = '
+<br/> 
+   振替 transfer = '
+<br/> 
+   各種取引 takeOrLead = '
+<br/> 
+   メニュー menu = '
+<br/> 
+   体験 taste = '
+<br/> 
+   体験終了する tasteEnd = '
+<br/> 
+   戻る back = '
+<br/> 
+   全資産 allAssets = '
+<br/> 
+   ブロンズステージ bronzeStage = '
+<br/> 
+   口座一覧 accountList = '
+<br/> 
+   中断 pause = "
+<br/> 
+   ちばぎんID新規登録を中断してよろしいですか？ registerPause = '
+<br/> 
+   口座残高 accountBalance = '
+<br/> 
+   すべて allAccountBalance = '
+<br/> 
+   入金 income = '
+<br/> 
+   出金 expand = '
+<br/> 
+   直近１ヶ月のお取引 passbookInfo = '
+<br/> 
+   通帳アプリでもっと見る passbookApp = '
+<br/> 
+   最大１０年分の入出金明細が確認できます passbookAccountDetail = '
+<br/> 
+   口座明細 accountDetail = '
+<br/> 
+   口座番号 accountNumber = '
+<br/> 
+   accountPrimary = '（代表）';
+<br/> 
+   普通預金・代表口座明細 normalPrimaryAccount = '
+<br/> 
+   明細確認 detailConfirm = '
+<br/> 
+   ちばぎん splashText = '
+<br/> 
+   キャンセル cancel = '
+<br/> 
+   閉じる popClose = '
+<br/> 
+   ok = 'OK';
+<br/> 
+   表示されるWEBサイトで、パスワードを再設定してください。 forgetUser = '
+<br/> 
+   ログアウトしてよろしいですか？ logoutAlert = '
+<br/> 
+   このページを開くために、\nブラウザを起動します。 openLinkAlert = '
+<br/> 
+   明細情報を取得できませんでした。 getBalanceFailed = '
+<br/> 
+   明細情報はありません。 getBalanceZero = '
+<br/> 
+   システムエラーが発生しました。申し訳ございませんがしばらくしてから再度ご利用ください。 webViewInitFailed =
+   '
+<br/> 
+   ブラウザアプリが端末内にインストールされていないためご利用できません。 hasNoBrowser = '
+<br/> 
+   次へ next = '
+
+///ひまわり宣言
+<br/> 
+   ひまわり宣言 declaration = '
+<br/> 
+   ステージ確認 declaration1Title = '
+<br/> 
+   ステージ判定条件について declaration1Next = '
+<br/> 
+   ステージ（ひまわり宣言）について declaration1BottomLink = '
+<br/> 
+   ステージ判定条件 declaration2Title = '
+<br/> 
+   ※給与振込としての振込または3か月連続10万円以上の振込が対象。 declaration2BottomText =
+<br/> 
+   ブロンズステージ特典 declaration1ImplementedText = '
+<br/> 
+   シルバーステージ特典 declaration2ImplementedText = '
+<br/> 
+   ゴールドステージ特典 declaration3ImplementedText = '
+<br/> 
+   ブロンズステージになると declaration1NotImplementedText = '
+<br/> 
+   シルバーステージになると declaration2NotImplementedText = '
+<br/> 
+   ゴールドステージになると declaration3NotImplementedText = '
+<br/> 
+   特典はございません declarationNotImplementedText = '
+<br/> 
+   ブロンズステージ declaration1TitleText = '
+<br/> 
+   シルバーステージ declaration2TitleText = '
+<br/> 
+   ゴールドステージ declaration3TitleText = '
+<br/> 
+   ステージ未達 declarationTitleText = '
+<br/> 
+   今月のあなたのステージ declarationTitle = '
+<br/> 
+   declarationNoTitle = '';
+<br/> 
+   アプリでは、ひまわり宣言のお申し込み後翌々月からご確認いただけます homeDeclarationNotJoin =
+   '
+
+///ホーム
+<br/> 
+   直近１ヶ月の入出金 lastMonthIncomeAndExpand = '
+<br/> 
+   もっと見る moreDetails = '
+<br/> 
+   defaultAmount = '¥----------';
+<br/> 
+   直近のお取引はありません。 noDetails = '
+<br/> 
+   明細情報を取得できませんでした。 detailsFailed = '
+<br/> 
+   口座情報を取得できませんでした。 accountListFailed = '
+<br/> 
+   取得失敗 declarationFailed = '
+<br/> 
+   ステージ未達 declarationNoLevel = '
+<br/> 
+   ブロンズ homeDeclarationLevel1 = '
+<br/> 
+   シルバー homeDeclarationLevel2 = '
+<br/> 
+   ゴールド homeDeclarationLevel3 = '
+<br/> 
+   未加入 homeDeclarationLevel4 = '
+<br/> 
+   お手続き中 homeDeclarationLevelError = '
+<br/> 
+   手数料無料回数を確認 declarationNext = '
+<br/> 
+   ステージ内容を確認 declarationNotJoin = '
+<br/> 
+   ひまわり宣言に申し込む declarationNotNext = '
+<br/> 
+   お手続きの完了まで\nしばらくお待ちください declarationNextError = '
+<br/> 
+   お手持ちのデビットカードを連携してください。連携するとご利用明細を確認できます。 debitHint = '
+
+///再認証
+<br/> 
+   再認証 restart = '
+<br/> 
+   認証する verify = '
+<br/> 
+   有効期間が過ぎています verifyExplain = '
+<br/> 
+   再認証してください verifyExplainTwo = '
+<br/> 
+   ちばぎんIDユーザー名 verifyUserName = '
+<br/> 
+   ちばぎんIDパスワード verifyPassword = '
+<br/> 
+   パスワードをお忘れの場合はこちら verifyForgetPassword = '
+<br/> 
+   ログアウト logout = '
+
+/// 振替
+<br/> 
+   振替口座設定 transferPage1Setting = '
+<br/> 
+   出金口座 transferPage1Out = '
+<br/> 
+   入金口座 transferPage1In = '
+<br/> 
+   振替金額を設定する transferPage1Next = '
+<br/> 
+   振替金額設定 transferPage2Setting = '
+<br/> 
+   振替金額 transferPage2Account = '
+<br/> 
+   円 transferPage2Money = '
+<br/> 
+   ※下限1円、上限500万円（1日あたり）\n   1日当たり回数制限なし transferPage2Hint =
+<br/> 
+   １円以上、５００万円以下で入力してください transferPage2Error = '
+<br/> 
+   例）100,000 transferPage2TextHint = '
+<br/> 
+   振替内容を確認する transferPage2Next = '
+<br/> 
+   振替内容の確認 transferPage3Confirm = '
+<br/> 
+   出金元口座 transferPage3From = '
+<br/> 
+   入金先口座 transferPage3To = '
+<br/> 
+   振替金額 transferPage3Amount = '
+<br/> 
+   振替手数料 transferPage3Money = '
+<br/> 
+   注意事項 transferPage3Warring = '
+<br/> 
+   transferPage3ContentDot = '・';
+<br/> 
+   振替を実行すると即時に振替を行いますので訂正はできません。 transferPage3Content1 = '
+<br/> 
+   出金元口座の残高が振替金額に不足している場合は、振替は実行できません。 transferPage3Content2 =
+   '
+<br/> 
+   内容を確認してから、ボタンをタップしてください。タップ後、振替が完了します。 transferPage3Tip =
+   '
+<br/> 
+   お取引を実行してもよろしいですか？ transferPage3Dialog = '
+<br/> 
+   実行後、キャンセルはできません。 transferPage3Description = '
+<br/> 
+   振替を実行する transferPage3Next = '
+<br/> 
+   振替完了 transferPage4Finish = '
+<br/> 
+   お手続きが完了しました!\nご利用ありがとうございました。 transferPage4Content = '
+<br/> 
+   ホームに戻る transferPage4Done = '
+<br/> 
+   transferTypeNormal = '(普通)';
+<br/> 
+   ここまでの入力内容は失われます。 transferPauseMessage = '
+<br/> 
+   中断する transferPauseConfirm = '
+<br/> 
+   お取引を中断しますか？ transferPauseTitle = '
+<br/> 
+   月合計 monthTotal = '
+
+/// 振込
+<br/> 
+   振込を中断しますか？ transferIntoPauseTitle = '
+<br/> 
+   振込先情報を取得できませんでした。 transferIntoGetDataError = '
+<br/> 
+   振込限度額を引き下げる transferIntoSetAmountTitle = '
+<br/> 
+   他の金融機関から探す otherBankTitle = '
+
+/// 借入/返済
+<br/> 
+   カードローンを借入れる borrowTitle = '
+<br/> 
+   カードローンを返済する returnTitle = '
+
+/// 口座
+<br/> 
+   当月のお取引はありません。 noMonthDetails = '
+<br/> 
+   JP_MoneyUnit = '¥';
+<br/> 
+   USD_MoneyUnit = r'US$ ';
+<br/> 
+   AUD_MoneyUnit = r'A$ ';
+<br/> 
+   EUR_MoneyUnit = '€ ';
+<br/> 
+   通帳アプリを起動してよろしいですか？ openAnotherAppAlertTitle = '
+<br/> 
+   未インストールの場合はストアを開きます。 openAnotherAppAlertDescription = '
+<br/> 
+   finbeeを起動してよろしいですか？ openFinbeeAppAlertTitle = '
+<br/> 
+   GooglePayを起動してよろしいですか？ openGooglePayAppAlertTitle = '
+
+/// 定期
+<br/> 
+   defaultDate = '--';
+<br/> 
+   預入を中断しますか？ detailTimePauseTitle = '
+
+/// 定期title
+<br/> 
+   定期預金預入 detailTimeTitle = '
+<br/> 
+   定期預金解約 detailTimeEndTitle = '
+
+/// documents url 错误文言
+<br/> 
+   システムエラーが発生しました。申し訳ございませんがしばらくしてから再度ご利用ください。 documentsErr =
+   '
+
+/// 振込の新規申し込み(page1)
+<br/> 
+   新しい振込先へ振込む remittanceRegulation = '
+
+/// 振込の登録list
+<br/> 
+   登録済振込先一覧 remittanceLoginList = '
+
+/// 振込の登録
+<br/> 
+   登録した振込先から振込む remittanceLogin = '
+
+/// 振込の履歴
+<br/> 
+   振込履歴から振込む remittanceHistory = '
+
+/// 振込の履歴title
+<br/> 
+   振込履歷 remittanceHistoryTitle = '
+
+/// 振込履歴詳細title
+<br/> 
+   振込履歴詳細 remittanceHistoryDetailTitle = '
+
+/// お知らせ
+<br/> 
+   お知らせ notificationTitle = '
+<br/> 
+   お知らせ情報を取得できませんでした。 notificationErrorTitle = '
+<br/> 
+   お知らせ情報を取得する notiticationErrorMessage = '
+<br/> 
+   お知らせがありません。 notificationNone = '
+
+/// お知らせ詳細
+<br/> 
+   お知らせ詳細 notificationDetailTitle = '
+
+<br/> 
+   千葉銀行から\n大切なお知らせを\n配信します。 notificationAccessRequestTitle =
+
+///passCode
+<br/> 
+   ログインパスコードの変更 passCodeChangeTitle = '
+<br/> 
+   パスコード変更を中断してよろしいですか？ passCodeChangeBreakSure = '
+<br/> 
+   新しい４桁のパスコードを\n設定してください newPassCodeInput = '
+<br/> 
+   確認のため、\nもう一度パスコードを設定してください。 passCodeSettingConfirm = '
+<br/> 
+   パスコードが一致しませんでした。\nもう一度やり直してください checkPassCodeErrorTitle = '
+</body>
+<script>
+   window.onload = ()=>{
+      var app = new Vue({
+         el: '#app',
+         data: {
+            message: 'Hello Vue!', 
+            list: [
+               {japanese: "アプリ利用規定", announce: "Apuri riyō kitei", chinese: "", english:"agree"},
+               {japanese: "", announce: "", chinese: "", english:""},
+               {japanese: "", announce: "", chinese: "", english:""},
+               {japanese: "", announce: "", chinese: "", english:""},
+               {japanese: "", announce: "", chinese: "", english:""},
+               {japanese: "", announce: "", chinese: "", english:""},
+               {japanese: "", announce: "", chinese: "", english:""},
+               {japanese: "", announce: "", chinese: "", english:""},
+               {japanese: "", announce: "", chinese: "", english:""},
+               {japanese: "", announce: "", chinese: "", english:""},
+               {japanese: "", announce: "", chinese: "", english:""},
+               {japanese: "", announce: "", chinese: "", english:""},
+               {japanese: "", announce: "", chinese: "", english:""},
+               {japanese: "", announce: "", chinese: "", english:""},
+               {japanese: "", announce: "", chinese: "", english:""},
+               {japanese: "", announce: "", chinese: "", english:""},
+               {japanese: "", announce: "", chinese: "", english:""},
+               {japanese: "", announce: "", chinese: "", english:""},
+               {japanese: "", announce: "", chinese: "", english:""},
+               {japanese: "", announce: "", chinese: "", english:""},
+               {japanese: "", announce: "", chinese: "", english:""},
+               {japanese: "", announce: "", chinese: "", english:""},
+               {japanese: "", announce: "", chinese: "", english:""},
+               {japanese: "", announce: "", chinese: "", english:""},
+               {japanese: "", announce: "", chinese: "", english:""},
+               {japanese: "", announce: "", chinese: "", english:""},
+               {japanese: "", announce: "", chinese: "", english:""},
+            ]
+         }
+      })
+   }
+</script>
+</html>
+
